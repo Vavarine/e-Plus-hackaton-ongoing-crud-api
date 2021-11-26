@@ -3913,6 +3913,17 @@ text-table@^0.2.0:
   resolved "https://registry.yarnpkg.com/text-table/-/text-table-0.2.0.tgz#7f5ee823ae805207c00af2df4a84ec3fcfa570b4"
   integrity sha1-f17oI66AUgfACvLfSoTsP8+lcLQ=
 
+tfcska-api@./:
+  version "1.0.0"
+  dependencies:
+    axios "^0.21.1"
+    cors "^2.8.5"
+    csv-parser "^3.0.0"
+    dotenv "^10.0.0"
+    express "^4.17.1"
+    express-async-errors "^3.1.1"
+    lowdb "github:dankreiger/lowdb#chore/esm-cjs-hybrid-WITH-LIB"
+
 to-fast-properties@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/to-fast-properties/-/to-fast-properties-2.0.0.tgz#dc5e698cbd079265bc73e0377681a4e4e83f616e"
