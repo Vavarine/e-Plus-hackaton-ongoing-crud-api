@@ -1,5 +1,7 @@
 import express from 'express'
+import 'express-async-errors'
 import cors from 'cors'
+import errorHandler from './errors/errorHandler'
 
 import routes from './routes'
 
@@ -14,7 +16,8 @@ app.get('/', (req, res) => {
 })
 
 app.use('/api', routes)
+app.use(errorHandler)
 
-app.listen(process.env.PORT || 3000, () => {
-	console.log(`🚀 Server started on port ${process.env.PORT || 3000}!`)
+app.listen(process.env.PORT || 3333, () => {
+	console.log(`🚀 Server started on port ${process.env.PORT || 3333}!`)
 })

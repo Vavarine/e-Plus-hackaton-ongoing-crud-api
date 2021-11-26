@@ -34,7 +34,9 @@
 		"dotenv": "^10.0.0",
 		"express": "^4.17.1",
 		"express-async-errors": "^3.1.1",
+		"firebase": "8.x",
 		"lowdb": "github:dankreiger/lowdb#chore/esm-cjs-hybrid-WITH-LIB",
-		"tfcska-api": "./"
+		"tfcska-api": "./",
+		"yup": "^0.32.11"
 	}
 }
