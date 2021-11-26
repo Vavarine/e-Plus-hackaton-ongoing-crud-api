@@ -4,6 +4,20 @@ import * as yup from 'yup'
 import TicketsController from '../controllers/TicketsController'
 
 export default {
+	async index(req: Request, res: Response) {
+		const tickets = await TicketsController.index()
+
+		return res.json(tickets)
+	},
+
+	async showByStoreId(req: Request, res: Response) {
+		const { storeId } = req.params
+
+		const tickets = await TicketsController.showByStoreId(storeId)
+
+		res.json(tickets)
+	},
+
 	async create(req: Request, res: Response) {
 		const { storeId } = req.params
 		const { number, hours, date } = req.body

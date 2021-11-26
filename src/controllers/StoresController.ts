@@ -21,5 +21,14 @@ export default {
 		await storesRef.add(store)
 
 		return
+	},
+
+	async show(storeId: string): Promise<Store> {
+		const storesRef = db.collection('stores')
+		const snapshot = await storesRef.doc(storeId).get()
+
+		const store = snapshot.data() as Store
+
+		return store
 	}
 }
