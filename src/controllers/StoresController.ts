@@ -20,6 +20,8 @@ export default {
 	async create(req: Request, res: Response) {
 		const { name, initialDay, hours }: Store = req.body
 
+		console.log(req.body)
+
 		const schema = yup.object().shape({
 			name: yup.string().required(),
 			initialDay: yup.number().required().min(1).max(31),

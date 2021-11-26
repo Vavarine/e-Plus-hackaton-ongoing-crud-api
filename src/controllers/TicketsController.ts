@@ -1,33 +1,42 @@
 import { Request, Response } from 'express'
 import { db } from 'services/firebase'
-import { Store } from 'types'
+import { Store, Ticket } from 'types'
 import * as yup from 'yup'
 
 export default {
 	async create(req: Request, res: Response) {
 		const { storeId } = req.params
-		// const { name, initialDay, hours }: Store = req.body
+		const { number, hours, date } = req.body
+
+		console.log({
+			storeId,
+			number,
+			hours,
+			date
+		})
 
 		// const schema = yup.object().shape({
-		// 	name: yup.string().required(),
-		// 	initialDay: yup.number().required().min(1).max(31),
-		// 	hours: yup.number().required().min(1)
+		// 	storeId: yup.string().required(),
+		// 	number: yup.number().required(),
+		// 	hours: yup.number().required(),
+		// 	date: yup.string().required()
 		// })
 
-		// const store: Ticket = {
-		// 	name,
-		// 	initialDay,
-		// 	hours
+		// const ticket: Ticket = {
+		// 	storeId,
+		// 	number,
+		// 	hours,
+		// 	date
 		// }
 
-		// await schema.validate(store, {
+		// await schema.validate(ticket, {
 		// 	abortEarly: false
 		// })
 
 		// const storesRef = db.collection('ticket')
 
-		// await storesRef.add(store)
+		// await storesRef.add(ticket)
 
-		return res.json({ message: 'hello' })
+		return res.json({ message: 'success' })
 	}
 }
