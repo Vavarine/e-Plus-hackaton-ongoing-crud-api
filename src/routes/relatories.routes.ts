@@ -3,6 +3,6 @@ import RelatoryService from '../services/RelatoryService'
 
 const storesRoutes = Router()
 
-storesRoutes.get('/:storeId', RelatoryService.get)
+storesRoutes.post('/:storeId', RelatoryService.get)
 
 export default storesRoutes
