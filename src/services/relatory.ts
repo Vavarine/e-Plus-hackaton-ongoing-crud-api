@@ -1,5 +1,7 @@
+import { Request, Response } from 'express'
 import { db } from '../database/firebase'
 import { Store } from 'types'
+import * as yup from 'yup'
 
 export default {
 	async index(): Promise<Store[]> {

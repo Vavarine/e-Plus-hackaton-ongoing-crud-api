@@ -1,9 +1,9 @@
 import { Router } from 'express'
-import StoresController from '../controllers/StoresController'
+import StoresService from '../services/StoresService'
 
 const storesRoutes = Router()
 
-storesRoutes.get('/', StoresController.index)
-storesRoutes.post('/', StoresController.create)
+storesRoutes.get('/', StoresService.index)
+storesRoutes.post('/', StoresService.create)
 
 export default storesRoutes

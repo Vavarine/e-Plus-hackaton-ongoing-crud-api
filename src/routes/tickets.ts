@@ -1,9 +1,9 @@
 import { Router } from 'express'
-import TicketsController from '../controllers/TicketsController'
+import TicketsService from '../services/TicketsService'
 
 const ticketsRoutes = Router()
 
 // ticketsRoutes.get('/', TicketsController.index)
-ticketsRoutes.post('/:storeId', TicketsController.create)
+ticketsRoutes.post('/:storeId', TicketsService.create)
 
 export default ticketsRoutes
