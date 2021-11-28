@@ -7,7 +7,7 @@ tmp/*
 temp/
 .env
 .env.development
-
+dist/
 
 coverage/
 
